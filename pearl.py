@@ -28,6 +28,8 @@ class PearlStyle(Style):
         Name.Attribute: '#50FA7B',
         Name.Builtin: '#8BE9FD',
         Name.Builtin.Pseudo: plain,
+        Name.Function: 'bold #fDAD2A',
+        Name.Function.Magic: 'bold #13D4FE',
         Name.Class: '#00E0E0',
         Name.Label: '#8BE9FD',
         Name.Tag: '#FF79C6',
