@@ -1,5 +1,5 @@
 from pygments.style import Style
-from pygments.token import Keyword, Name, Comment, String, Error, Literal, \
+from pygments.token import Keyword, Name, Comment, String, Literal, \
     Number, Operator, Other, Punctuation, Text, Generic, Whitespace
 
 __all__ = ['PearlStyle']
@@ -9,7 +9,6 @@ class PearlStyle(Style):
     styles = {
         Whitespace: plain,
         Generic: plain,
-        Error: plain,
         Literal: plain,
         Other: plain,
         Punctuation: plain,
@@ -18,20 +17,22 @@ class PearlStyle(Style):
         Comment: '#FFFFB3',
         Number: '#FFFFB3',
         String: '#79D338',
-        Operator: '#56B6C2',
+        Operator: '#6BC4CF',  # math operators, "is", ==, etc.
+        Operator.Word: '#6BC4CF',
 
-        Keyword: '#DCC6E0',
+        Keyword: '#DBC0E0',  # key words
         Keyword.Constant: '#EC93C5',
         Keyword.Type: '#8BE9FD',
         
-        Name: plain,
-        Name.Attribute: '#50FA7B',
-        Name.Builtin: '#8BE9FD',
-        Name.Builtin.Pseudo: plain,
-        Name.Function: 'bold #fDAD2A',
-        Name.Function.Magic: 'bold #13D4FE',
-        Name.Class: '#00E0E0',
-        Name.Label: '#8BE9FD',
-        Name.Tag: '#FF79C6',
-        Name.Variable: '#00E0E0'
+        Name: '#FFFFFF',  # general naming
+        Name.Attribute: '#FFFFFF',  # class variable names
+        Name.Builtin: '#FFFFFF',  # built in types
+        Name.Builtin.Pseudo: '#DBC0E0',  # self
+        Name.Function: '#8BE9FD',  # function names
+        Name.Function.Magic: '#8BE9FD',  # special py methods
+        Name.Class: '#00E0E0',  # class name
+        Name.Label: '#FFFFFF',  # none, true, false
+        Name.Tag: '#FF79C6',  # types
+        Name.Exception: '#DBC0E0', # exceptions
+        Name.Variable: '#00E0E0'  # variable names
     }
